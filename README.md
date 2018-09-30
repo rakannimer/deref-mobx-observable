@@ -6,6 +6,8 @@
 
 [![NPM](https://img.shields.io/npm/v/deref-mobx-observable.svg)](https://www.npmjs.com/package/deref-mobx-observable) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[![Build Status](https://travis-ci.org/rakannimer/deref-mobx-observable.svg?branch=master)](https://travis-ci.org/rakannimer/deref-mobx-observable)
+
 ## Install
 
 ```bash
