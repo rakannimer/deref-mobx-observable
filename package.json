@@ -1,7 +1,7 @@
 {
   "name": "deref-mobx-observable",
   "version": "0.1.0",
-  "description": "Deref mobx observables deep in your component directory for better performance.",
+  "description": "Deref mobx observables deep in your component tree for better performance.",
   "author": "rakannimer",
   "license": "MIT",
   "repository": "rakannimer/deref-mobx-observable",
