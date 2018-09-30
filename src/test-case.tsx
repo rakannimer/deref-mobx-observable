@@ -1,21 +1,6 @@
-# deref-mobx-observable
-
-> Deref mobx observables deep in your component directory for better performance.
-
-[![NPM](https://img.shields.io/npm/v/deref-mobx-observable.svg)](https://www.npmjs.com/package/deref-mobx-observable) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save deref-mobx-observable
-```
-
-## Usage
-
-```tsx
 import * as React from "react";
 import { observable } from "mobx";
-import Deref from "deref-mobx-observable";
+import Deref from "./index";
 const val = observable.box(1);
 
 export default class App extends React.Component<{ Deref: typeof Deref }> {
@@ -30,15 +15,13 @@ export default class App extends React.Component<{ Deref: typeof Deref }> {
           <h2>👇 won't be re-rendered</h2>
           <pre data-testid="should-not-change-1">{Date.now()}</pre>
         </div>
-        <Deref obs={val}>
+        <Deref obs={val} map={({ oldValue, newValue }) => newValue + 1}>
           {value => (
             // This will be re-rendered
             <div>
               <h2>👇 will be re-rendered</h2>
               <pre data-testid="should-change">{Date.now()}</pre>
-              <pre data-testid="should-change-value">
-                {JSON.stringify(value)}
-              </pre>
+              <pre data-testid="should-have-mapped-value">{value}</pre>
             </div>
           )}
         </Deref>
@@ -56,8 +39,3 @@ export default class App extends React.Component<{ Deref: typeof Deref }> {
     );
   }
 }
-```
-
-## License
-
-MIT © [rakannimer](https://github.com/rakannimer)
