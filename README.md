@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install --save deref-mobx-observable
+yarn add deref-mobx-observable  # Or npm install --save deref-mobx-observable
 ```
 
 ## Usage
