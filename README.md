@@ -1,5 +1,7 @@
 # deref-mobx-observable
 
+[![BundlePhobia][bundlephobia-badge]][bundlephobia-href]
+
 > Deref mobx observables deep in your component directory for better performance.
 
 [![NPM](https://img.shields.io/npm/v/deref-mobx-observable.svg)](https://www.npmjs.com/package/deref-mobx-observable) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -61,3 +63,6 @@ export default class App extends React.Component<{ Deref: typeof Deref }> {
 ## License
 
 MIT © [rakannimer](https://github.com/rakannimer)
+
+[bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/deref-mobx-observable.svg
+[bundlephobia-href]: https://bundlephobia.com/result?p=deref-mobx-observable
